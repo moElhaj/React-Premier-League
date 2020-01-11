@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  background-color: #3C175A;
+  color: #fff;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*Side and Wrapper*/
+
+.side {
+  width: 100%;
+  padding-top: 70px;
+  text-align: center;
+  height: 100%;
+  margin-right: -100%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  background-color: #e50676;
+  transition: 0.2s;
+  margin-top: 44px;
+}
+
+.side.active {
+  margin-right: 0 !important;
+}
+
+.side ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.side li {
+  margin: 2em;
+}
+
+.side a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 0.5em;
+  color: #ffffff;
+}
+
+.side a:hover,
+.side a:focus {
+  color: #ddd;
+}
+
+/*header*/
+
+.header {
+  background-color: #e50676;
+  padding: 10px;
+}
+
+.menu a {
+  text-decoration: none!important;
+  color: #fff;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: #3C175A;
+}
+
+/*Icon*/
+
+.icon {
+  display: none;
+  float: right;
+  cursor: pointer;
+}
+
+.line1, .line2, .line3 {
+  width: 25px;
+height: 3px;
+background: #fff;
+box-shadow: 0 2px 5px rgba(0,0,0,.2);
+transition: .5s;
+margin: 4px 0;
+}
+
+.icon.active .line2 {
+  background: rgba(0,0,0,0);
+  box-shadow: 0 2px 5px rgba(0,0,0,0);
+}
+
+.icon.active .line1 {
+  transform: rotate(45deg) translate(4px, 6px);
+}
+
+.icon.active .line3 {
+  transform: rotate(-45deg) translate(4px, -6px);
+  /* -webkit-transform: rotate(45deg) translate(-8px, -8px); */
+}
+
+
+/*wrapper*/
+
+.wrapper{
+  margin: 5% 10%;
+}
+
+
+/* Matches */
+
+.matches{
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.match {
+  margin: 20px;
+  padding: 20px;
+  background-color: #8a37ce;
+  border: 1px solid #1d0233;
+}
+
+.details {
+  padding: 10px;
+  font-size: 12px;
+}
+
+.padding20 {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.score {
+  font-size: 28px;
+  padding-top: 20px;
+}
+
+.img-fluid {
+  width: 100px;
+  height: 100px;
+}
+
+/* 404 */
+
+.notfound {
+  padding-top: 80px;
+}
+
+/* table */
+
+.table {
+  padding: 5px;
+  margin-top: 10px;
+  overflow-x:auto;
+}
+
+table {
+  width: 100%;
+  font-size: 14px;
+  border-spacing: 0;
+  border-top: 0px solid #e50676 !important;
+}
+
+th {
+  text-align: left;
+}
+
+tr.border_bottom td {
+  border-bottom: 0.6pt solid #8a37ce !important;
+}
+
+thead tr th{border-bottom: 1px solid #e50676 !important; 
+  border-collapse:separate; 
+  border-spacing:5px 5px;} 
+
+td {
+  padding: 10px 0;
+}
+
+.tableLogo {
+  margin-right: 3px;
+  margin-bottom: -3px;
+}
+
+/* media */
+
+@media only screen and (max-width: 768px) {
+
+  .menu {
+    display: none;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .wrapper {
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .img-fluid {
+    width: 50px;
+    height: 50px;
+  }
+
+  .score {
+    font-size: 18px;
+    padding-top: 20px;
+  }
+
+}
+
+
+/*loader*/
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #e50676;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: #e50676;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+
+
